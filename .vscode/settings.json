@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "c:\\Users\\DVM\\Desktop\\Projects\\RandomFileGenerator\\venv\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\DVM\\Desktop\\Projects\\RandomFileGenerator\\venv\\Scripts\\python.exe",
+    "cSpell.words": [
+        "Texto",
+        "milisegundos"
+    ]
 }

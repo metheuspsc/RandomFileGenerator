@@ -2,29 +2,20 @@ import random
 import string
 import time
 
-start_time = time.time()
+def GeraTxtAleatorio(linhas):
 
-with open('test_10k.txt', 'w') as f:
-    for line in range(10000):
-        f.write(''.join([random.choice(string.ascii_letters) for i in range(60)]))
-        f.write('\n')
+    start_time = time.time()
 
-first_time = time.time() - start_time
+    with open('test_{}.txt'.format(linhas), 'w') as f:
+        for line in range(linhas):
+            f.write(''.join([random.choice(string.ascii_letters) for i in range(60)]))
+            f.write('\n')
 
-print('Texto com 10 mil linhas gerado em: {} milisegundos'.format(first_time*1000))
+    end_time = time.time() - start_time
 
-mid_time = time.time()
+    print('Texto com {} linhas gerado em: {} milisegundos'.format(linhas,end_time*1000))
 
-with open('test_100k.txt', 'w') as f:
-    for line in range(100000):
-        f.write(''.join([random.choice(string.ascii_letters) for i in range(60)]))
-        f.write('\n')
 
-sec_time = time.time() - mid_time
-
-print('Texto com 100 mil linhas gerado em: {} milisegundos'.format(sec_time*1000))
-
-full_time = time.time() - start_time
-
-print('Rotina concluida em: {} milisegundos'.format(full_time*1000))
-
+if __name__ == "__main__":
+    GeraTxtAleatorio(10000)
+    GeraTxtAleatorio(100000)
